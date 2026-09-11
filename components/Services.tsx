@@ -11,7 +11,11 @@ export default function Services({ preview = false }: ServicesProps) {
   const items = preview ? services.slice(0, 3) : services;
 
   return (
-    <section className="bg-paper pt-16 text-charcoal sm:pt-20">
+    <section
+      className={`bg-paper text-charcoal ${
+        preview ? "pt-16 sm:pt-20" : ""
+      }`}
+    >
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
