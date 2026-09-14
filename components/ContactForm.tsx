@@ -21,10 +21,12 @@ export default function ContactForm() {
         <span className="flex h-14 w-14 items-center justify-center bg-brake text-paper">
           <HugeiconsIcon icon={Tick02Icon} size={28} strokeWidth={2} />
         </span>
-        <h3 className="mt-5 text-2xl font-semibold text-paper">Request received</h3>
+        <h3 className="mt-5 text-2xl font-semibold text-paper">
+          Request received
+        </h3>
         <p className="mt-2 max-w-md text-sm text-paper/70">
-          Thanks for reaching out. A Summit Auto advisor will contact you soon to
-          confirm your slot.
+          Thanks for reaching out. A Summit Auto advisor will contact you soon
+          to confirm your slot.
         </p>
         <button
           type="button"
@@ -40,42 +42,50 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="grid gap-4 sm:grid-cols-2">
       <label className="block sm:col-span-1">
-        <span className="mb-1.5 block text-xs font-medium text-paper/70">Name</span>
+        <span className="mb-1.5 block text-xs font-medium text-paper/70">
+          Name
+        </span>
         <input
           required
           name="name"
           type="text"
           placeholder="Your full name"
-          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-sm text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
+          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-base text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
         />
       </label>
       <label className="block sm:col-span-1">
-        <span className="mb-1.5 block text-xs font-medium text-paper/70">Phone</span>
+        <span className="mb-1.5 block text-xs font-medium text-paper/70">
+          Phone
+        </span>
         <input
           required
           name="phone"
           type="tel"
           placeholder="+234 ..."
-          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-sm text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
+          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-base text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
         />
       </label>
       <label className="block sm:col-span-1">
-        <span className="mb-1.5 block text-xs font-medium text-paper/70">Vehicle</span>
+        <span className="mb-1.5 block text-xs font-medium text-paper/70">
+          Vehicle
+        </span>
         <input
           required
           name="vehicle"
           type="text"
           placeholder="Make, model, year"
-          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-sm text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
+          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-base text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
         />
       </label>
       <label className="block sm:col-span-1">
-        <span className="mb-1.5 block text-xs font-medium text-paper/70">Service type</span>
+        <span className="mb-1.5 block text-xs font-medium text-paper/70">
+          Service type
+        </span>
         <select
           required
           name="service"
           defaultValue=""
-          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-sm text-paper outline-none transition focus:border-brake"
+          className="w-full border border-white/10 bg-charcoal px-3.5 py-3 text-base text-paper outline-none transition focus:border-brake"
         >
           <option value="" disabled>
             Select a service
@@ -88,13 +98,15 @@ export default function ContactForm() {
         </select>
       </label>
       <label className="block sm:col-span-2">
-        <span className="mb-1.5 block text-xs font-medium text-paper/70">Message</span>
+        <span className="mb-1.5 block text-xs font-medium text-paper/70">
+          Message
+        </span>
         <textarea
           required
           name="message"
           rows={4}
           placeholder="What is going on with the car?"
-          className="w-full resize-y border border-white/10 bg-charcoal px-3.5 py-3 text-sm text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
+          className="w-full resize-y border border-white/10 bg-charcoal px-3.5 py-3 text-base text-paper outline-none transition placeholder:text-paper/35 focus:border-brake"
         />
       </label>
       <div className="sm:col-span-2">
