@@ -9,7 +9,12 @@ import {
 } from "@hugeicons/core-free-icons";
 import { aboutStory, reasons } from "@/lib/why-us";
 
-const icons = [HandshakeIcon, SecurityCheckIcon, ToolsIcon, CustomerServiceIcon];
+const icons = [
+  HandshakeIcon,
+  SecurityCheckIcon,
+  ToolsIcon,
+  CustomerServiceIcon,
+];
 
 type WhyUsProps = {
   preview?: boolean;
@@ -41,13 +46,22 @@ export default function WhyUs({ preview = false }: WhyUsProps) {
             <p className="mt-3 text-paper/65">{aboutStory.lead}</p>
             <div className="mt-8 space-y-5">
               {shown.map((reason, index) => (
-                <article key={reason.title} className="border border-white/10 p-5">
+                <article
+                  key={reason.title}
+                  className="border border-white/10 p-5"
+                >
                   <div className="flex items-start gap-3">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center bg-brake text-paper">
-                      <HugeiconsIcon icon={icons[index]} size={22} strokeWidth={1.75} />
+                      <HugeiconsIcon
+                        icon={icons[index]}
+                        size={22}
+                        strokeWidth={1.75}
+                      />
                     </span>
                     <div>
-                      <h3 className="text-lg font-semibold text-paper">{reason.title}</h3>
+                      <h3 className="text-lg font-semibold text-paper">
+                        {reason.title}
+                      </h3>
                       <p className="mt-1 text-sm leading-relaxed text-paper/65">
                         {reason.body}
                       </p>
@@ -61,7 +75,11 @@ export default function WhyUs({ preview = false }: WhyUsProps) {
               className="mt-8 inline-flex items-center justify-center gap-2 bg-brake px-7 py-3.5 text-sm font-semibold text-paper transition hover:bg-brakedeep"
             >
               Our story
-              <HugeiconsIcon icon={ArrowRight01Icon} size={18} strokeWidth={2} />
+              <HugeiconsIcon
+                icon={ArrowRight01Icon}
+                size={18}
+                strokeWidth={2}
+              />
             </a>
           </div>
         </div>
@@ -83,7 +101,10 @@ export default function WhyUs({ preview = false }: WhyUsProps) {
             <p className="mt-3 text-paper/65">{aboutStory.lead}</p>
             <div className="mt-6 space-y-4">
               {aboutStory.paragraphs.map((paragraph) => (
-                <p key={paragraph.slice(0, 24)} className="text-sm leading-relaxed text-paper/70">
+                <p
+                  key={paragraph.slice(0, 24)}
+                  className=" leading-relaxed text-paper/70"
+                >
                   {paragraph}
                 </p>
               ))}
@@ -102,12 +123,23 @@ export default function WhyUs({ preview = false }: WhyUsProps) {
 
         <div className="mt-12 grid gap-5 sm:grid-cols-2">
           {reasons.map((reason, index) => (
-            <article key={reason.title} className="border border-white/8 bg-steel/50 p-6">
+            <article
+              key={reason.title}
+              className="border border-white/8 bg-steel/50 p-6"
+            >
               <span className="flex h-11 w-11 items-center justify-center bg-brake text-paper">
-                <HugeiconsIcon icon={icons[index]} size={22} strokeWidth={1.75} />
+                <HugeiconsIcon
+                  icon={icons[index]}
+                  size={22}
+                  strokeWidth={1.75}
+                />
               </span>
-              <h3 className="mt-4 text-lg font-semibold text-paper">{reason.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-paper/65">{reason.body}</p>
+              <h3 className="mt-4 text-lg font-semibold text-paper">
+                {reason.title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-paper/65">
+                {reason.body}
+              </p>
             </article>
           ))}
         </div>
